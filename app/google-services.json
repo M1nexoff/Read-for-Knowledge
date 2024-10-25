@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "319029483286",
+    "project_id": "bookapp-b7fe1",
+    "storage_bucket": "bookapp-b7fe1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319029483286:android:65c706fab8dd851fdba237",
+        "android_client_info": {
+          "package_name": "uz.gita.readforknowledge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtScyKGBVc0h5F4xO7buCnSO7MssaZ3Ew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

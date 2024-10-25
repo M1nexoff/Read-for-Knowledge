@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.readforknowledge.ui.main.MainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_infoScreen"
+            app:destination="@id/infoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoScreen"
+        android:name="uz.gita.readforknowledge.ui.info.InfoScreen"
+        android:label="InfoScreen" >
+        <action
+            android:id="@+id/action_infoScreen_to_pdfScreen"
+            app:destination="@id/pdfScreen" />
+        <argument
+            android:name="UIBookData"
+            app:argType="uz.gita.readforknowledge.data.model.UIBookData" />
+    </fragment>
+    <fragment
+        android:id="@+id/pdfScreen"
+        android:name="uz.gita.readforknowledge.ui.pdf.PdfScreen"
+        android:label="PdfScreen" >
+        <argument
+            android:name="File"
+            app:argType="java.io.File" />
+        <argument
+            android:name="book"
+            app:argType="uz.gita.readforknowledge.data.model.UIBookData" />
+    </fragment>
+</navigation>

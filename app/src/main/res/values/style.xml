@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MySeekBar">
+        <item name="android:progressBackgroundTint">@color/black</item>
+        <item name="android:progressTint">@color/black</item>
+    </style>
+</resources>

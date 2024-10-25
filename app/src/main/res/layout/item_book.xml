@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginHorizontal="12dp"
+    android:paddingBottom="8dp"
+    android:elevation="4dp"
+    android:background="@drawable/bg_green_solid">
+
+    <!-- Image View for Book Cover -->
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="12dp"
+        android:id="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="160dp"
+            android:contentDescription="Book Cover"
+            android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+    <!-- Book Title -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="The Psychology of Money"
+        android:textColor="@android:color/black"
+        android:paddingHorizontal="12dp"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <!-- Author Name -->
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Morgan Housel"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <!-- File Size -->
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23 MB"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@id/author" />
+
+    <!-- Installed Status -->
+    <TextView
+        android:id="@+id/installed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_installed"
+
+        android:padding="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Installed"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/size" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

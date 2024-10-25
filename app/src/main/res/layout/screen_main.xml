@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#016CDF"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/books_list"
+        tools:listitem="@layout/item_book"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:spanCount="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+    <ImageView
+        android:id="@+id/empty_box"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.326" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="No Data :("
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/empty_box"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/empty_box"
+        app:layout_constraintTop_toBottomOf="@+id/empty_box" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
